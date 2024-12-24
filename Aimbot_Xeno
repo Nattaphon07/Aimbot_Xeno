@@ -338,7 +338,7 @@ do
 
     local AimbotSection = Tabs.Aimbot:AddSection("Aimbot")
 
-    local AimbotToggle = AimbotSection:AddToggle("Aimbot", { Title = "เปิดตัวนี้", Description = "Toggles the Aimbot", Default = Configuration.Aimbot })
+    local AimbotToggle = AimbotSection:AddToggle("Aimbot", { Title = "Aimbot", Description = "Toggles the Aimbot", Default = Configuration.Aimbot })
     AimbotToggle:OnChanged(function(Value)
         Configuration.Aimbot = Value
         if not IsComputer then
@@ -347,7 +347,7 @@ do
     end)
 
     if IsComputer then
-        local OnePressAimingModeToggle = AimbotSection:AddToggle("OnePressAimingMode", { Title = "เปิดตัวนี้", Description = "Uses the One-Press Mode instead of the Holding Mode", Default = Configuration.OnePressAimingMode })
+        local OnePressAimingModeToggle = AimbotSection:AddToggle("OnePressAimingMode", { Title = "OnePressAimingMode", Description = "Uses the One-Press Mode instead of the Holding Mode", Default = Configuration.OnePressAimingMode })
         OnePressAimingModeToggle:OnChanged(function(Value)
             Configuration.OnePressAimingMode = Value
         end)
@@ -743,12 +743,12 @@ do
 
     local SimpleChecksSection = Tabs.Checks:AddSection("Simple Checks")
 
-    local AliveCheckToggle = SimpleChecksSection:AddToggle("AliveCheck", { Title = "เปิดตัวนี้", Description = "Toggles the Alive Check", Default = Configuration.AliveCheck })
+    local AliveCheckToggle = SimpleChecksSection:AddToggle("AliveCheck", { Title = "Alive Check", Description = "Toggles the Alive Check", Default = Configuration.AliveCheck })
     AliveCheckToggle:OnChanged(function(Value)
         Configuration.AliveCheck = Value
     end)
 
-    local GodCheckToggle = SimpleChecksSection:AddToggle("GodCheck", { Title = "เปิดตัวนี้", Description = "Toggles the God Check", Default = Configuration.GodCheck })
+    local GodCheckToggle = SimpleChecksSection:AddToggle("GodCheck", { Title = "God Check", Description = "Toggles the God Check", Default = Configuration.GodCheck })
     GodCheckToggle:OnChanged(function(Value)
         Configuration.GodCheck = Value
     end)
@@ -1683,7 +1683,7 @@ do
             })
         elseif ShowWarning then
             Window:Dialog({
-                Title = "กูให้ใช้ฟรีนะไออั๋นไซรน้อย ขอบคุณสำหรับข้อมูล",
+                Title = "XENO EZ | AIMBOT",
                 Content = string.format("ของฟรีมีในโลก Aim Bot %s  🔥FREE🔥!", string.format(MonthlyLabels[os.date("*t").month], "Open Aimbot")),
                 Buttons = {
                     {
